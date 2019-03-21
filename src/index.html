@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>输入</title>
+    <link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body style="">
+    <h2>食品追溯系统输入端</h2>
+    <p>Fill the form and submit it.</p>
+
+
+
+<div class="easyui-panel" id="p" title="插入" style="width: 60%">
+    <div style="padding:10px 60px 20px 60px" >
+        <form id="ff" method="post">
+            <table cellpadding="5" style="text-align: center">
+                <tr>
+                    <td>商品ID:</td>
+                    <td><input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>公司名字:</td>
+                    <td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+                </tr>
+                <tr>
+                    <td>时间:</td>
+                    <td><input class="easyui-datebox" type="text" name="subject" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>null:</td>
+                    <td><input class="easyui-textbox" name="message" data-options="required:true"></input></td>
+                </tr>
+            </table>
+        </form>
+        <div style="padding:15px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">Submit</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">Clear</a>
+        </div>
+    </div>
+
+</div>
+</div>
+<script>
+
+    function submitForm(){
+        $('#ff').form('submit');
+    }
+    function clearForm(){
+        $('#ff').form('clear');
+    }
+</script>
+</body>
+</html>
